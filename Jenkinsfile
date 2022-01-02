@@ -27,7 +27,7 @@ pipeline {
             steps {
                 //sh 'docker image build -t ${REPOSITORY_TAG} .'
                 script {
-                    docker.build -t ${REPOSITORY_TAG} .
+                    docker.build -t mahesh1101/mahesh-personal-org-sls-test:3 .
                 }
             }
         }
