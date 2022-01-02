@@ -26,9 +26,9 @@ pipeline {
         stage('Build and Push Image') {
             steps {
                 //sh 'docker image build -t ${REPOSITORY_TAG} .'
-                script {
+
                     docker.build("mahesh1101/mahesh-personal-org-sls-test:3") .
-                }
+
             }
         }
 
