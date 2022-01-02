@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        dockerfile true
+    }
 
     environment {
         //you must set the following environment variables
@@ -25,9 +27,9 @@ pipeline {
 
         stage('Build and Push Image') {
             steps {
-                //sh 'docker image build -t ${REPOSITORY_TAG} .'
+                sh 'docker image build -t ${REPOSITORY_TAG} .'
 
-                    docker.build("mahesh1101/mahesh-personal-org-sls-test:3") .
+                //    docker.build("mahesh1101/mahesh-personal-org-sls-test:3")
 
             }
         }
